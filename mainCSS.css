@@ -1,0 +1,310 @@
+*, *::after, *::before
+ {
+    box-sizing: border-box;
+    font-family: cursive;
+  }
+.header{
+    color: white;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    margin-top: 40px;
+    position: relative;
+    font-size: 3rem;
+    font-family: cursive;
+  
+}
+.headerbg{
+  text-shadow: 2px 2px 5px #000;
+  padding: 60px;
+  text-align: center;
+  background: #000;
+  color: white;
+  font-size: 30px;
+  font-family: cursive;
+  background-image: url("./images/marvelCH.jpg");
+  background-size:cover;
+  background-repeat: no-repeat; 
+  width:100%;
+  height: 140%;
+ 
+}
+h1{
+  font-family: cursive;
+}
+  body {
+    font-family: cursive;
+    background: linear-gradient(141deg, #101010 25%, #0e193f 45%,#070633 70% ,	#000000 90%);
+    margin: 0;
+    background-repeat: no-repeat;
+    margin-bottom: 30%;
+  }
+  body.lightMode{
+    background-color: #fff;
+    color:rgba(6, 22, 73);
+  }
+  body.lightMode, .boardCell{
+    border-color: rgba(6, 22, 73);
+  }
+ 
+  /* Setting up game container + board cells */
+  .gameCont{
+  /* min-height: 100vh; */
+  margin-top: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  }
+  .gameBoard {
+  display: grid;
+  width: 300px;
+  height: 300px;
+  grid-template-columns: auto auto auto;
+  margin: 50px auto;  
+  }
+  .boardCell{
+  display: flex;
+  width: 140px;
+  height: 140px;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: bold;
+  border: 3px solid #fff;
+  /* transition: background 0.2s ease-in-out; */
+  }
+  .boardCell:hover{
+  cursor: pointer;
+  /* background: #dadada46; */
+  background-image: url("./images/captainAmerica.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  }
+  .ironManTurn{
+  /* background: #f3545446; */
+  background-image: url("./images/ironMan.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  }
+  /* first page links style */
+
+  .div-center {
+    margin: auto;
+    width: 60%;
+    border:none;
+    padding: 10px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60%;
+    margin-top: 8%;
+  }
+  .div-center button {
+    font-size: 3rem;
+    background-color: white;
+    color: rgba(6, 22, 73);
+    border: 1px solid rgba(6, 22, 73);
+    padding: .25em .5em;
+    border-radius: 8px;
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  .div-center button:hover {
+    background-color: rgba(6, 22, 73);
+    color: white;
+    border-color: white;
+  }
+  
+  /* about the game styles */
+  .aboutGame {
+    position: relative;
+    display: inline-block;
+   
+  }
+  
+  .aboutGame .aboutGameText {
+    visibility: hidden;
+    width: 120px;
+    background-color: white;
+    color: rgba(6, 22, 73);
+    font-size: 1.3rem;
+    font-family: cursive;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    right: 110%;
+  }
+  
+  .aboutGame .aboutGameText::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent white;
+  }
+  
+  .aboutGame:hover .aboutGameText {
+    visibility: visible;
+    /* opacity: 1; */
+  }
+
+   /* music button style */
+  .musicBG button{
+    font-size: 1.3rem;
+    background-color: white;
+    color: rgba(6, 22, 73);
+    border: 1px solid rgba(6, 22, 73);
+    padding: .25em .5em;
+    border-radius: 8px;
+    width: 140px;
+    cursor: pointer;
+    display: grid;
+    align-items: flex-start;
+    justify-content: left;
+    margin: 20px 0 0 20px;
+    font-family: cursive;
+    text-align: center;
+    float: left;
+  }
+  
+   .musicBG, .music:hover {
+    /* background-color: rgba(6, 22, 73); */
+    color: rgba(6, 22, 73);;
+    border-color: white;
+  }
+  
+  /* testttttt */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #eee;
+  }
+  
+  h1 {
+    font-size: 5rem;
+    margin-bottom: 0.5em;
+  }
+  
+  h2 {
+    margin-top: 1em;
+    font-size: 2rem;
+    margin-bottom: 0.5em;
+  }
+  
+  .play-area {
+    display: grid;
+    width: 300px;
+    height: 300px;
+    grid-template-columns: auto auto auto;
+  }
+  
+  .block {
+    display: flex;
+    width: 140px;
+    height: 140px;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: bold;
+    border: 3px solid #fff;
+    /* transition: background 0.2s ease-in-out; */
+  }
+  
+  .block:hover {
+    cursor: pointer;
+    /* background: #dadada46; */
+    background-image: url("./images/captainAmerica.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  
+  }
+  .winner {
+    background: #2497247a;
+  }
+  
+  .winner:hover {
+    background: #249724e0;
+  }
+  .capAmericaWin{
+    color: #fff;
+    font-family: cursive;
+    font-size: 2em;
+    float: left;
+    margin: 20px 0 0 50px;
+  }
+  .ironManWin{
+    color: #fff;
+    font-family: cursive;
+    font-size: 2em;
+    float: left;
+    margin: 20px 0 0 40px;
+    padding-inline-end: 900px;
+  }
+  .draw{
+    color: #fff;
+    font-family: cursive;
+    font-size: 2em;
+    float: left;
+    margin: 20px 0 0 50px;
+  }
+  #boardCell0,
+  #boardCell1,
+  #boardCell2 {
+    border-top: none;
+  }
+  
+  #boardCell0,
+  #boardCell3,
+  #boardCell6 {
+    border-left: none;
+  }
+  
+  #boardCell6,
+  #boardCell7,
+  #boardCell8 {
+    border-bottom: none;
+  }
+  
+  #boardCell2,
+  #boardCell5,
+  #boardCell8 {
+    border-right: none;
+  }
+  
+  @media only screen and (max-width: 600px) {
+  
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5em;
+    }
+  
+    h2 {
+      margin-top: 1em;
+      font-size: 1.3rem;
+    }
+  }
+  
+  
+  
+  
+  
